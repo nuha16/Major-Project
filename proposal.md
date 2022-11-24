@@ -6,10 +6,10 @@
 - main menu page
 - nested loops probably (for dialogue options)
 - energy that you use as you play the stages in the game (you can gain back energy over time)
-- in-game rewards for clearing stages
 - different endings based on player's choices
 
 ## Nice to have
 - gacha system
+- in-game rewards for clearing stages (redeemable at the gacha)
 - mini games within the game
 - hidden endings

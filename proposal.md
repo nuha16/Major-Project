@@ -3,6 +3,7 @@
 
 ## Need to have
 - single player
+- main menu page
 - nested loops probably
 - energy that you use as you play the stages in the game (you can gain back energy over time)
 - in-game rewards for clearing stages

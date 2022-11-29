@@ -4,9 +4,10 @@
 ## Need to have
 - single player
 - main menu page
-- nested loops probably (for dialogue options)
+- dialogue options
 - energy that you use as you play the stages in the game (you can gain back energy over time)
 - different endings based on player's choices
+- background music and sound effects
 
 ## Nice to have
 - gacha system

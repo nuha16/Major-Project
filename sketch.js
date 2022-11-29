@@ -6,6 +6,7 @@
 // - describe what you did to take this project "above and beyond"
 
 let pinkBackground, pinkButton, blueButton, brownButton, greenButton;
+let state = "start";
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -20,5 +21,6 @@ function preload(){
 }
 
 function draw() {
+  // background for start
   image(pinkBackground, 0, 0, windowWidth*1.02, windowHeight*1.02);
 }

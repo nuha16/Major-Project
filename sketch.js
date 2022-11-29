@@ -5,8 +5,13 @@
 // Extra for Experts:
 // - describe what you did to take this project "above and beyond"
 
+// reference for objects = https://www.youtube.com/watch?v=LQGTb112N_c
+
 let pinkBackground, pinkButton, blueButton, brownButton, greenButton;
 let state = "start";
+
+// questions to ask the player
+let questions = {};
 
 function setup() {
   createCanvas(windowWidth, windowHeight);

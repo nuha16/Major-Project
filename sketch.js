@@ -20,5 +20,5 @@ function preload(){
 }
 
 function draw() {
-  image(pinkBackground, 0, 0, windowWidth*1.0002, windowHeight*1.02);
+  image(pinkBackground, 0, 0, windowWidth*1.02, windowHeight*1.02);
 }

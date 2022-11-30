@@ -26,6 +26,11 @@ function preload(){
 }
 
 function draw() {
+  bckground();
+}
+
+function bckground() {
   // background for start
-  image(pinkBackground, 0, 0, windowWidth*1.02, windowHeight*1.02);
+  imageMode(CENTER);
+  image(pinkBackground, width/2, height/2, windowWidth*0.9, windowHeight*0.999);
 }

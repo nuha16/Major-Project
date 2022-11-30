@@ -7,7 +7,7 @@
 
 // reference for objects = https://www.youtube.com/watch?v=LQGTb112N_c
 
-let pinkBackground, pinkButton, blueButton, brownButton, greenButton;
+let pinkBackground, pinkButton, blueButton, brownButton, greenButton, purplePillars;
 let state = "start";
 
 // questions to ask the player
@@ -18,6 +18,7 @@ function setup() {
 }
 
 function preload(){
+  purplePillars = loadImage("images/start screen purplePillars.png");
   pinkBackground = loadImage("images/pink cloud background.png");
   pinkButton = loadImage("images/pink strip.png");
   blueButton = loadImage("images/blue strip.png");

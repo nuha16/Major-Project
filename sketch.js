@@ -26,11 +26,11 @@ function preload(){
 }
 
 function draw() {
-  bckground();
+  menuBackground();
 }
 
-function bckground() {
-  // background for start
+function menuBackground() {
+  // background for main menu
   imageMode(CENTER);
   image(pinkBackground, width/2, height/2, windowWidth*0.9, windowHeight*0.999);
 }

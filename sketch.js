@@ -27,7 +27,13 @@ function preload(){
 }
 
 function draw() {
-  menuBackground();
+  if (state === "start"){
+    startBackground();
+  }
+
+  if (state === "menu"){
+    menuBackground();
+  }
 }
 
 class Button {
@@ -39,7 +45,10 @@ class Button {
     this.img = img;
   }
 
-  display() {}
+  display() {
+    image(this.img, this.x, this.y, this.width, this.height);
+  }
+
   insideButton(x, y) {
     return x > this.x && x < this.x + this.width && y > this.y && y < this.y + this.height;
   }
@@ -49,4 +58,14 @@ function menuBackground() {
   // background for main menu
   imageMode(CENTER);
   image(pinkBackground, width/2, height/2, windowWidth*0.9, windowHeight*0.999);
+}
+
+function startBackground() {
+  // background for start
+  background("#a393fa");
+
+  imageMode(CENTER);
+  image(purplePillars, width/2, height/2, width*0.5, height*0.999);
+
+  
 }

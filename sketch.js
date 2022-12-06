@@ -30,6 +30,21 @@ function draw() {
   menuBackground();
 }
 
+class Button {
+  constructor(x, y, width, height, img){
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+    this.img = img;
+  }
+
+  display() {}
+  insideButton(x, y) {
+    return x > this.x && x < this.x + this.width && y > this.y && y < this.y + this.height;
+  }
+}
+
 function menuBackground() {
   // background for main menu
   imageMode(CENTER);

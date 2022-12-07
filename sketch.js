@@ -6,8 +6,9 @@
 // - describe what you did to take this project "above and beyond"
 
 // reference for objects = https://www.youtube.com/watch?v=LQGTb112N_c
+// website where I got my fonts = http://legionfonts.com/
 
-let pinkBackground, pinkButton, blueButton, brownButton, greenButton, purplePillars, dreamerone, repetitionScrolling;
+let pinkBackground, pinkButton, blueButton, brownButton, greenButton, purplePillars, dreamerone, repetitionScrolling, zapRagyun;
 let state = "start";
 
 // questions to ask the player
@@ -21,6 +22,7 @@ function preload(){
   // fonts
   dreamerone = loadFont("fonts/Dreamerone bold.ttf");
   repetitionScrolling = loadFont("fonts/Repetition Scrolling.ttf");
+  zapRagyun = loadFont("fonts/Zap Raygun.ttf");
 
   // images
   purplePillars = loadImage("images/start screen pillar.png");
@@ -73,7 +75,8 @@ function startBackground() {
   image(purplePillars, width/2, height/2, width*0.5, height*0.999);
 
   textSize(50);
-  textFont(repetitionScrolling);
+  textFont(zapRagyun);
   text("TITLE", 100, 200);
+  text("random words", 200, 100);
   
 }

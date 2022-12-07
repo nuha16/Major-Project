@@ -7,7 +7,7 @@
 
 // reference for objects = https://www.youtube.com/watch?v=LQGTb112N_c
 
-let pinkBackground, pinkButton, blueButton, brownButton, greenButton, purplePillars;
+let pinkBackground, pinkButton, blueButton, brownButton, greenButton, purplePillars, dreamerone, repetitionScrolling;
 let state = "start";
 
 // questions to ask the player
@@ -18,6 +18,11 @@ function setup() {
 }
 
 function preload(){
+  // fonts
+  dreamerone = loadFont("fonts/Dreamerone bold.ttf");
+  repetitionScrolling = loadFont("fonts/Repetition Scrolling.ttf");
+
+  // images
   purplePillars = loadImage("images/start screen pillar.png");
   pinkBackground = loadImage("images/pink cloud background.png");
   pinkButton = loadImage("images/pink strip.png");
@@ -67,5 +72,8 @@ function startBackground() {
   imageMode(CENTER);
   image(purplePillars, width/2, height/2, width*0.5, height*0.999);
 
+  textSize(50);
+  textFont(repetitionScrolling);
+  text("TITLE", 100, 200);
   
 }

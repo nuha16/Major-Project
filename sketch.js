@@ -75,7 +75,7 @@ function startBackground() {
   image(purplePillars, width/2, height/2, width*0.5, height*0.999);
 
   textSize(50);
-  textFont(zapRagyun);
+  textFont(repetitionScrolling);
   text("TITLE", 100, 200);
   text("random words", 200, 100);
   

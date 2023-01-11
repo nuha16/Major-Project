@@ -6,9 +6,10 @@
 // - describe what you did to take this project "above and beyond"
 
 // reference for objects = https://www.youtube.com/watch?v=LQGTb112N_c
-// website where I got my fonts = http://legionfonts.com/
+// website where I got my fonts = https://www.dafont.com/
+// an extension was needed to be downloaded for the fonts - stxr.iconfont-preview
 
-let pinkBackground, pinkButton, blueButton, brownButton, greenButton, purplePillars, dreamerone, repetitionScrolling, zapRagyun;
+let pinkBackground, pinkButton, blueButton, brownButton, greenButton, purplePillars, rainyHearts, enchantedSword, littleLego;
 let state = "start";
 
 // questions to ask the player
@@ -20,9 +21,9 @@ function setup() {
 
 function preload(){
   // fonts
-  dreamerone = loadFont("fonts/Dreamerone bold.ttf");
-  repetitionScrolling = loadFont("fonts/Repetition Scrolling.ttf");
-  zapRagyun = loadFont("fonts/Zap Raygun.ttf");
+  rainyHearts = loadFont("fonts/rainyhearts.ttf");
+  enchantedSword = loadFont("fonts/EnchantedSword.ttf");
+  littleLego = loadFont("fonts/littlelego.ttf");
 
   // images
   purplePillars = loadImage("images/start screen pillar.png");
@@ -75,8 +76,7 @@ function startBackground() {
   image(purplePillars, width/2, height/2, width*0.5, height*0.999);
 
   textSize(50);
-  textFont(dreamerone);
+  textFont(littleLego);
   text("TITLE", 100, 200);
   text("random words", 200, 100);
-  
 }

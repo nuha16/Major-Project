@@ -33,12 +33,13 @@ function preload(){
   littleLego = loadFont("fonts/littlelego.ttf");
   rainyHearts = loadFont("fonts/rainyhearts.ttf");
   enchantedSword = loadFont("fonts/EnchantedSword.ttf");
-  littleLego = loadFont("fonts/littlelego.ttf");
 
 }
 
 function draw(){
-  startBackground();
+  if (state === "start"){
+    startBackground();
+  }
 }
 
 class Button {
@@ -68,6 +69,5 @@ function startBackground() {
 
   textSize(50);
   textFont(littleLego);
-  text("TITLE", 100, 200);
-  text("random words", 200, 100);
+  text("YOUR AVERAGE OTOME GAME", 100, 200);
 }

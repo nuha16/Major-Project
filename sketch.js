@@ -9,73 +9,75 @@
 // website where I got my fonts = https://www.dafont.com/
 // an extension was needed to be downloaded for the fonts - stxr.iconfont-preview
 
-let pinkButton, blueButton, brownButton, greenButton, purplePillars, rainyHearts, enchantedSword, littleLego;
-let state = "start";
 
-// questions to ask the player
-let questions = {};
+// code keeps crashing so I'm going to rewrite
+// let pinkButton, blueButton, brownButton, greenButton, purplePillars, rainyHearts, enchantedSword, littleLego;
+// let state = "start";
 
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-}
+// // questions to ask the player
+// let questions = {};
 
-function preload(){
-  // fonts
-  rainyHearts = loadFont("fonts/rainyhearts.ttf");
-  enchantedSword = loadFont("fonts/EnchantedSword.ttf");
-  littleLego = loadFont("fonts/littlelego.ttf");
+// function setup() {
+//   createCanvas(windowWidth, windowHeight);
+// }
 
-  // images
-  purplePillars = loadImage("images/start screen pillar.png");
-  pinkButton = loadImage("images/pink strip.png");
-  blueButton = loadImage("images/blue strip.png");
-  brownButton = loadImage("images/brown strip.png");
-  greenButton = loadImage("images/green strip.png");
-}
+// function preload(){
+//   // fonts
+//   rainyHearts = loadFont("fonts/rainyhearts.ttf");
+//   enchantedSword = loadFont("fonts/EnchantedSword.ttf");
+//   littleLego = loadFont("fonts/littlelego.ttf");
 
-function draw() {
-  if (state === "start"){
-    startBackground();
-  }
+//   // images
+//   purplePillars = loadImage("purple pillars.png");
+//   pinkButton = loadImage("images/pink strip.png");
+//   blueButton = loadImage("images/blue strip.png");
+//   brownButton = loadImage("images/brown strip.png");
+//   greenButton = loadImage("images/green strip.png");
+// }
 
-  if (state === "menu"){
-    menuBackground();
-  }
-}
+// function draw() {
+//   if (state === "start"){
+//     startBackground();
+//   }
 
-class Button {
-  constructor(x, y, width, height, img){
-    this.x = x;
-    this.y = y;
-    this.width = width;
-    this.height = height;
-    this.img = img;
-  }
+//   // if (state === "menu"){
+//   //   menuBackground();
+//   // }
+// }
 
-  display() {
-    image(this.img, this.x, this.y, this.width, this.height);
-  }
+// class Button {
+//   constructor(x, y, width, height, img){
+//     this.x = x;
+//     this.y = y;
+//     this.width = width;
+//     this.height = height;
+//     this.img = img;
+//   }
 
-  insideButton(x, y) {
-    return x > this.x && x < this.x + this.width && y > this.y && y < this.y + this.height;
-  }
-}
+//   display() {
+//     image(this.img, this.x, this.y, this.width, this.height);
+//   }
 
-function menuBackground() {
-  // background for main menu
-  imageMode(CENTER);
-  image(width/2, height/2, windowWidth*0.9, windowHeight*0.999);
-}
+//   insideButton(x, y) {
+//     return x > this.x && x < this.x + this.width && y > this.y && y < this.y + this.height;
+//   }
+// }
 
-function startBackground() {
-  // background for start
-  background("#a393fa");
+// // function menuBackground() {
+// //   // background for main menu
+// //   imageMode(CENTER);
+// //   image(width/2, height/2, windowWidth*0.9, windowHeight*0.999);
+// // }
 
-  imageMode(CENTER);
-  image(purplePillars, width/2, height/2, width*0.5, height*0.999);
+// function startBackground() {
+//   // background for start
+//   background("#a393fa");
 
-  textSize(50);
-  textFont(littleLego);
-  text("TITLE", 100, 200);
-  text("random words", 200, 100);
-}
+//   imageMode(CENTER);
+//   image(purplePillars, width/2, height/2, width*0.5, height*0.999);
+
+//   textSize(50);
+//   textFont(littleLego);
+//   text("TITLE", 100, 200);
+//   text("random words", 200, 100);
+// }

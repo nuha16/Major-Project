@@ -27,7 +27,6 @@ function preload(){
 
   // images
   purplePillars = loadImage("images/start screen pillar.png");
-  pinkBackground = loadImage("images/pink cloud background.png");
   pinkButton = loadImage("images/pink strip.png");
   blueButton = loadImage("images/blue strip.png");
   brownButton = loadImage("images/brown strip.png");

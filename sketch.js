@@ -9,7 +9,7 @@
 // website where I got my fonts = https://www.dafont.com/
 // an extension was needed to be downloaded for the fonts - stxr.iconfont-preview
 
-let pinkBackground, pinkButton, blueButton, brownButton, greenButton, purplePillars, rainyHearts, enchantedSword, littleLego;
+let pinkButton, blueButton, brownButton, greenButton, purplePillars, rainyHearts, enchantedSword, littleLego;
 let state = "start";
 
 // questions to ask the player
@@ -64,7 +64,7 @@ class Button {
 function menuBackground() {
   // background for main menu
   imageMode(CENTER);
-  image(pinkBackground, width/2, height/2, windowWidth*0.9, windowHeight*0.999);
+  image(width/2, height/2, windowWidth*0.9, windowHeight*0.999);
 }
 
 function startBackground() {

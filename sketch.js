@@ -69,5 +69,5 @@ function startBackground() {
 
   textSize(50);
   textFont(littleLego);
-  text("YOUR AVERAGE OTOME GAME", 100, 200);
+  text("AVERAGE OTOME GAME", 100, 200);
 }

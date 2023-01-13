@@ -11,7 +11,7 @@
 // an extension was needed to be downloaded for the fonts - stxr.iconfont-preview
 
 
-let pinkButton, princessBg, glassCase, blueButton, brownButton, greenButton, rainyHearts, enchantedSword, littleLego;
+let pinkButton, pinkBg, glassCase, blueButton, brownButton, greenButton, rainyHearts, enchantedSword, littleLego;
 
 // // questions to ask the player
 // let questions = {};
@@ -24,7 +24,7 @@ function setup(){
 
 function preload(){
   // images
-  princessBg = loadImage("images/princess aesthetic.jpg");
+  pinkBg = loadImage("images/pink bg.png");
   pinkButton = loadImage("images/pink strip.png");
   blueButton = loadImage("images/blue strip.png");
   brownButton = loadImage("images/brown strip.png");
@@ -65,7 +65,8 @@ class Button {
 function startBackground() {
   // background for start
   imageMode(CENTER);
-  image(princessBg, width/2, height/2, width*0.85, height*0.9);
+  background("#fee2e1");
+  image(pinkBg, width/2, height/2, width*0.85, height*0.9);
 
   textSize(50);
   textFont(littleLego);

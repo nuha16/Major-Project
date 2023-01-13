@@ -66,12 +66,12 @@ function startBackground() {
   // background for start
   imageMode(CENTER);
   background("#fee2e1");
-  image(pinkBg, width/2, height/2, width*0.85, height*0.9);
+  image(pinkBg, width/2.05, height/2, width*0.75, height*0.8);
 
-  textSize(50);
+  textSize(60);
   textFont(littleLego);
   
-  text("AVERAGE OTOME GAME", 100, 200);
+  text("AVERAGE OTOME GAME", width/3.9, height/3);
 
     //start button
   let startButton = new Button(width/2, height/2, width/4, height/7, pinkButton);

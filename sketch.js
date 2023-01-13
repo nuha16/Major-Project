@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 // Project Title
 // Nuha Maisara
 // 28/11/22
@@ -10,7 +11,7 @@
 // an extension was needed to be downloaded for the fonts - stxr.iconfont-preview
 
 
-let pinkButton, blueButton, brownButton, greenButton, purplePillars, rainyHearts, enchantedSword, littleLego;
+let pinkButton, princessBg, glassCase, blueButton, brownButton, greenButton, rainyHearts, enchantedSword, littleLego;
 
 // // questions to ask the player
 // let questions = {};
@@ -23,11 +24,12 @@ function setup(){
 
 function preload(){
   // images
-  purplePillars = loadImage("images/purple pillars.png");
+  princessBg = loadImage("images/princess aesthetic.jpg");
   pinkButton = loadImage("images/pink strip.png");
   blueButton = loadImage("images/blue strip.png");
   brownButton = loadImage("images/brown strip.png");
   greenButton = loadImage("images/green strip.png");
+  glassCase = loadImage("images/letter in case.PNG");
 
   // fonts
   littleLego = loadFont("fonts/littlelego.ttf");
@@ -62,12 +64,14 @@ class Button {
 
 function startBackground() {
   // background for start
-  background("#a393fa");
-
   imageMode(CENTER);
-  image(purplePillars, width/2, height/2, width*0.5, height*0.999);
+  image(princessBg, width/2, height/2, width*0.85, height*0.9);
 
   textSize(50);
   textFont(littleLego);
   text("YOUR AVERAGE OTOME GAME", 100, 200);
+
+    // start button
+    // let startButton = new Button(width/2, height/2, width/4, height/7, pinkButton);
+    // startButton.display();
 }

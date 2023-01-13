@@ -69,9 +69,10 @@ function startBackground() {
 
   textSize(50);
   textFont(littleLego);
-  text("YOUR AVERAGE OTOME GAME", 100, 200);
+  
+  text("AVERAGE OTOME GAME", 100, 200);
 
-    // start button
-    // let startButton = new Button(width/2, height/2, width/4, height/7, pinkButton);
-    // startButton.display();
+    //start button
+  let startButton = new Button(width/2, height/2, width/4, height/7, pinkButton);
+  startButton.display();
 }

@@ -37,19 +37,12 @@ function preload(){
   littleLego = loadFont("fonts/littlelego.ttf");
   rainyHearts = loadFont("fonts/rainyhearts.ttf");
   enchantedSword = loadFont("fonts/EnchantedSword.ttf");
-<<<<<<< HEAD
-
 }
-let startButton = new Button(width/2, height/2, width/4, height/7, pinkButton);
-
 
 function draw(){
   if (state === "start"){
     startScreen();
   }
-=======
-  
->>>>>>> a3ac90a777f0dec1d98edd08151ede7c39fc9ed9
 }
 
 class Button {
@@ -70,54 +63,25 @@ class Button {
   }
 }
 
-<<<<<<< HEAD
 function mousePressed(){
   // change state - start to menu
   if (startButton.insideButton()){
-=======
-let startButton = new Button(width/2, height/2, width/4, height/7, pinkButton);
-
-function draw(){
-  if (state === "start"){
-    startBackground();
-  }
-  if (state === "menu"){
-    background("black");
-  }
-}
-
-function mousePressed(){
-  if (state === "start" && startButton.isInside(mouseX, mouseY)){
->>>>>>> a3ac90a777f0dec1d98edd08151ede7c39fc9ed9
     state = "menu";
   }
 }
-
-<<<<<<< HEAD
+let startButton = new Button(width/2, height/2, width/4, height/7, pinkButton);
 
 function startScreen() {
-=======
-function startBackground() {
->>>>>>> a3ac90a777f0dec1d98edd08151ede7c39fc9ed9
   // background for start
   imageMode(CENTER);
   background("#fee2e1");
   image(pinkBg, width/2.05, height/2, width*0.75, height*0.8);
-<<<<<<< HEAD
-  
-  // title/name of the game
-  textSize(60);
-  textFont(littleLego);
-  text("AVERAGE OTOME GAME", width/4.7, height/3);
-  
-=======
 
-  // title
+    // title
   textSize(60);
   textFont(littleLego);
   text("AVERAGE OTOME GAME", width/3.9, height/3);
 
->>>>>>> a3ac90a777f0dec1d98edd08151ede7c39fc9ed9
   //start button
   startButton.display();
 }

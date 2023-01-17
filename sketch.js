@@ -10,7 +10,6 @@
 // website where I got my fonts = https://www.dafont.com/
 // an extension was needed to be downloaded for the fonts - stxr.iconfont-preview
 
-
 let pinkButton, pinkBg, glassCase, blueButton, brownButton, greenButton, rainyHearts, enchantedSword, littleLego;
 
 // // questions to ask the player
@@ -20,7 +19,10 @@ let state = "start";
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
+
 }
+
+// buttons
 
 function preload(){
   // images
@@ -37,10 +39,12 @@ function preload(){
   enchantedSword = loadFont("fonts/EnchantedSword.ttf");
 
 }
+let startButton = new Button(width/2, height/2, width/4, height/7, pinkButton);
+
 
 function draw(){
   if (state === "start"){
-    startBackground();
+    startScreen();
   }
 }
 
@@ -62,18 +66,31 @@ class Button {
   }
 }
 
-function startBackground() {
+function mousePressed(){
+  // change state - start to menu
+  if (startButton.insideButton()){
+    state = "menu";
+  }
+}
+
+
+function startScreen() {
   // background for start
   imageMode(CENTER);
   background("#fee2e1");
   image(pinkBg, width/2.05, height/2, width*0.75, height*0.8);
-
+  
+  // title/name of the game
   textSize(60);
   textFont(littleLego);
+  text("AVERAGE OTOME GAME", width/4.7, height/3);
   
-  text("AVERAGE OTOME GAME", width/3.9, height/3);
-
-    //start button
-  let startButton = new Button(width/2, height/2, width/4, height/7, pinkButton);
+  //start button
   startButton.display();
+}
+
+function menuScreen() {
+  if (state === "menu"){
+    background("black");
+  }
 }

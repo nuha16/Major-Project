@@ -19,7 +19,6 @@ let state = "start";
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
-
 }
 
 // buttons
@@ -69,7 +68,9 @@ function mousePressed(){
     state = "menu";
   }
 }
-let startButton = new Button(width/2, height/2, width/4, height/7, pinkButton);
+
+// let startButton = new Button(width/2, height/2, width/4, height/7, pinkButton);
+let startButton;
 
 function startScreen() {
   // background for start
@@ -81,9 +82,15 @@ function startScreen() {
   textSize(60);
   textFont(littleLego);
   text("AVERAGE OTOME GAME", width/3.9, height/3);
+  
+    //start button
+    let startButton = new Button(width/2, height/2, width/4, height/7, pinkButton);
+    startButton.display();
 
-  //start button
-  startButton.display();
+  // start txt
+  textSize(60);
+  textFont(littleLego);
+  text("Start", width/2, height/2);
 }
 
 function menuScreen() {

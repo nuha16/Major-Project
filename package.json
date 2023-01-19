@@ -22,6 +22,7 @@
     },
     "globals": {
 
+      "mouseWentDown": true,
       "width": true,
       "height": true,
       "drawingContext": true,

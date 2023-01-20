@@ -35,8 +35,12 @@ function preload(){
 }
 
 function draw(){
-  startScreen();
-  menuScreen();
+  if (state === "start"){
+    startScreen();
+  }
+  else if (state === "menu"){
+    menuScreen();
+  }
 }
 
 class Button {
@@ -57,42 +61,34 @@ class Button {
   }
 }
 
-
-
 function startScreen() {
-  if (state === "start"){
-    // background for start
-    imageMode(CENTER);
-    background("#fee2e1");
-    image(pinkBg, width/2.05, height/2, width*0.75, height*0.8);
+  // background for start
+  imageMode(CENTER);
+  background("#fee2e1");
+  image(pinkBg, width/2.05, height/2, width*0.75, height*0.8);
 
-    // title
-    textSize(60);
-    textFont(littleLego);
-    text("AVERAGE OTOME GAME", width/3.9, height/3);
+  // title
+  textSize(60);
+  textFont(littleLego);
+  text("AVERAGE OTOME GAME", width/3.9, height/3);
   
-    //start button
-    let startButton = new Button(width/2, height/2, width/4, height/7, pinkButton);
-    startButton.display();
+  //start button
+  let startButton = new Button(width/2, height/2, width/4, height/7, pinkButton);
+  startButton.display();
     
-    // start txt
-    textSize(60);
-    textFont(littleLego);
-    text("Start", width/2.4, height/1.95);
-
-  } 
+  // start txt
+  textSize(60);
+  textFont(littleLego);
+  text("Start", width/2.4, height/1.95);
 }
 
 function menuScreen() {
-  if (state === "menu"){
-    background("black");
-  }
+  background("black");
 }
 
 function mousePressed(){
   // change state - start to menu
   if (startButton.insideButton(mouseX, mouseY)){
     state = "menu";
-    console.log("nuha is stupid");
   }
 }

@@ -17,6 +17,7 @@ let state = "start";
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
+  startButton = new Button(width/2, height/2, width/4, height/7, pinkButton);
 }
 
 function preload(){
@@ -73,7 +74,6 @@ function startScreen() {
   text("AVERAGE OTOME GAME", width/3.9, height/3);
   
   //start button
-  let startButton = new Button(width/2, height/2, width/4, height/7, pinkButton);
   startButton.display();
     
   // start txt

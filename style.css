@@ -7,7 +7,7 @@ canvas {
   display: block;
 }
 
-* {
+*, *::before, *::after{
   box-sizing: border-box;
 }
 
@@ -17,8 +17,15 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 120vw;
+  align-items: flex-end;
+  width: 150vw;
   height: 100vh;
-  background-color: white;
+}
+
+.dialogue-container {
+  width: 800px;
+  max-width: 80%;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
 }

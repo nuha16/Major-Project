@@ -5,6 +5,9 @@
 
 // nice to have
 
+// reference for html ids, containers, classes = https://www.youtube.com/watch?v=wXUhTZpF_HQ&ab_channel=DaniKrossing
+// basic html review = https://www.youtube.com/watch?v=MDLn5-zSQQI&ab_channel=Simplilearn
+// buttons with html
 // reference for objects = https://www.youtube.com/watch?v=LQGTb112N_c
 // website where I got my fonts = https://www.dafont.com/
 // an extension was needed to be downloaded for the fonts - stxr.iconfont-preview

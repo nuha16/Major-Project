@@ -62,13 +62,13 @@ class Button {
   }
   
   insideButton(x, y) {
+    // faulty button
     let leftSide = this.x;
     let rightSide = this.x + this.width;
     let topSide = this.y;
     let bottomSide = this.y + this.height;
 
-    return x > leftSide && x < rightSide &&
-           y > topSide && y < bottomSide;
+    return x >= leftSide && x <= rightSide && y >= topSide && y <= bottomSide;
     // return mouseX >= x && mouseX <= x + width && mouseY >= y && mouseY <= y + height;
   }
 }

@@ -5,12 +5,15 @@
 
 // nice to have
 
-// reference for html ids, containers, classes = https://www.youtube.com/watch?v=wXUhTZpF_HQ&ab_channel=DaniKrossing
+// reference for ids, containers, classes = https://www.youtube.com/watch?v=wXUhTZpF_HQ&ab_channel=DaniKrossing
 // basic html review = https://www.youtube.com/watch?v=MDLn5-zSQQI&ab_channel=Simplilearn
-// buttons with html
-// reference for objects = https://www.youtube.com/watch?v=LQGTb112N_c
+// buttons with html = https://www.youtube.com/watch?v=_2wARy-oevQ&t=3s&ab_channel=BroCode
+// reference for css function = https://www.w3schools.com/css/default.asp
+// css basics = https://www.youtube.com/watch?v=1PnVor36_40&ab_channel=WebDevSimplified
 // website where I got my fonts = https://www.dafont.com/
 // an extension was needed to be downloaded for the fonts - stxr.iconfont-preview
+
+// https://www.youtube.com/watch?v=LQGTb112N_c
 
 let pinkButton, pinkBg, glassCase, blueButton, brownButton, greenButton, rainyHearts, enchantedSword, littleLego, startButton;
 let state = "start";

@@ -3,8 +3,6 @@
 // Nuha Maisara
 // 28/11/22
 
-// nice to have
-
 // reference for ids, containers, classes = https://www.youtube.com/watch?v=wXUhTZpF_HQ&ab_channel=DaniKrossing
 // basic html review = https://www.youtube.com/watch?v=MDLn5-zSQQI&ab_channel=Simplilearn
 // buttons with html = https://www.youtube.com/watch?v=_2wARy-oevQ&t=3s&ab_channel=BroCode
@@ -64,7 +62,14 @@ class Button {
   }
   
   insideButton(x, y) {
-    return x > this.x && x < this.x + this.width && y > this.y && y < this.y + this.height;
+    let leftSide = this.x;
+    let rightSide = this.x + this.width;
+    let topSide = this.y;
+    let bottomSide = this.y + this.height;
+
+    return x > leftSide && x < rightSide &&
+           y > topSide && y < bottomSide;
+    // return mouseX >= x && mouseX <= x + width && mouseY >= y && mouseY <= y + height;
   }
 }
 
@@ -77,7 +82,7 @@ function startScreen() {
   // title
   textSize(60);
   textFont(littleLego);
-  text("AVERAGE OTOME GAME", width/3.9, height/3);
+  text("AVERAGE OTOME GAME", width/4.5, height/3);
   
   //start button
   startButton.display();

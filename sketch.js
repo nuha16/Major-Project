@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 // Project Title
 // Nuha Maisara
 // 28/11/22
@@ -6,21 +5,33 @@
 // reference for ids, containers, classes = https://www.youtube.com/watch?v=wXUhTZpF_HQ&ab_channel=DaniKrossing
 // basic html review = https://www.youtube.com/watch?v=MDLn5-zSQQI&ab_channel=Simplilearn
 // buttons with html = https://www.youtube.com/watch?v=_2wARy-oevQ&t=3s&ab_channel=BroCode
-// reference for css and html function = https://www.w3schools.com/
+// reference for css, html and js function = https://www.w3schools.com/
 // css basics = https://www.youtube.com/watch?v=1PnVor36_40&ab_channel=WebDevSimplified
 // website where I got my fonts = https://www.dafont.com/
 // an extension was needed to be downloaded for the fonts - stxr.iconfont-preview
 
 let pinkBg, glassCase, littleLego;
-let state = "start";
+let state = {};
+const dialogueText = document.getElementById("text"); //https://www.w3schools.com/js/js_htmldom_document.asp
+const buttonOptions = document.getElementById("dialogue-options");
 
-// // questions to ask the player
-// let questions = {};
+const textNodes = [
+  {
+    id: 1,
+    text: "Test try.",
 
-function setup(){
-  // createCanvas(windowWidth, windowHeight);
-  // startButton = new Button(width/2, height/2, 300, 100);
-}
+    // the text on the option buttons
+    options: [
+      {
+        text: "test try button 1"
+      },
+      {
+        text: "test try button 2"
+      }
+    ]
+
+  }
+];
 
 function preload(){
   // images
@@ -33,7 +44,18 @@ function preload(){
   // enchantedSword = loadFont("fonts/EnchantedSword.ttf");
 }
 
-// function draw(){
+function startGame() {
+  state = {};
+  showTextNode(1);
+}
+
+function showTextNode(textNodeIndex){}
+
+function chooseOption(option) {
+
+}
+
+// function draw(){ 
 //   if (state === "start"){
 //     startScreen();
 //   }

@@ -15,6 +15,7 @@ const buttonOption = document.getElementById("option-buttons");
 
 let state = {};
 
+// starts the game
 function startGame() {
   state = {};
   showTextNode(1);
@@ -203,6 +204,89 @@ const textNodes = [
       {
         text: "Rob a bank, buy a porshe 911, (in pink, of course) drive it home", //rob bank
         nextText: 14
+      }
+    ]
+  },
+
+  {
+    // walk home
+    id:11,
+    text: "You walk out the gates of the Academy, not even turning back once.",
+    options: [
+      {
+        text: "Next...", // sound
+        nextText: 15
+      }
+    ]
+  },
+  {
+    // sound
+    id:15,
+    text: "You call your mother, telling her that wouldn't be attending the Academy after all. After you end the call, you think about which school to apply to next. Even if your tuition was covered in the Academy, uniform and texbooks would be costly anyways, not to mention additional fees for things like clubs and school trips. So in a way, this was a good thing. Suddenly, you hear a noise in the bushes beside you.",
+    options: [
+      {
+        text: "Check Bushes", //bushes
+        nextText: 16
+      },
+      {
+        text: "No, are you kidding, this is how horror movies start", //boring and peaceful ending
+        nextText: 17
+      }
+    ]
+  },
+  {
+    // bushes
+    id:16,
+    text: "You go and check behind the bushes. And you were right, it was only a cat. What are you, the main character or something? As if danger awaits you at every turn. 'Thud!' You hear another sound nearby, only louder.",
+    options: [
+      {
+        text: "But I AM the main character, so no, that's enough looking around", // boring and peaceful ending
+        nextText: 17
+      },
+      {
+        text: "Of course, what could happen?", //check again
+        nextText: 18
+      }
+    ]
+  },
+  {
+    // check again
+    id:18,
+    text: "Once again, there was nothing crazy there. It must have been another cat, or some small animal.",
+    options: [
+      {
+        text: "That's enough exploring, there's obviously nothing here", // boring and peaceful ending
+        nextText: 17
+      },
+      {
+        text: "My spider senses are tingling, there must be something", // spider senses
+        nextText: 19
+      }
+    ]
+  },
+  {
+    // 
+    id: 19,
+    text: "At this point even I am annoyed that this main character is so persistent. And despite your needless curiosity, there was nothing here, just like before. You approach the forest-like area besides the bushes. Continue searching?",
+    options: [
+      {
+        text: "Ok maybe I am being paranoid", // boring and peaceful ending
+        nextText: 17
+      },
+      {
+        text: "Yes, my gut feeling has never betrayed me before", // 
+        nextText: 20
+      }
+    ]
+  },
+  {
+    // boring and peaceful ending
+    id:17,
+    text: "You return home, safe and sound. You attend a normal school and graduate very normally, get a normal job and live a normal live. You live until your 90s, and die a peaceful death.",
+    options: [
+      {
+        text: "Play Again",
+        nextText: -1
       }
     ]
   },

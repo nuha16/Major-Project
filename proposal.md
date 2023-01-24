@@ -3,8 +3,9 @@
 
 ## Need to have
 - single player
-- start page
+- main menu page
 - dialogue options
+- energy that you use as you play the stages in the game (you can gain back energy over time)
 - different endings based on player's choices
 - background music and sound effects
 

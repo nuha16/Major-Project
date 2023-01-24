@@ -13,8 +13,6 @@
 
 // for the code in my sketch js, I referenced this vid https://www.youtube.com/watch?v=R1S_NhKkvGA&t=568s&ab_channel=WebDevSimplified
 
-let pinkBg, glassCase, littleLego;
-
 const dialogueText = document.getElementById("text");
 const buttonOption = document.getElementById("option-buttons");
 
@@ -23,15 +21,6 @@ let state = {};
 function startGame() {
   state = {};
   showTextNode(1);
-}
-
-function preload(){
-  // images
-  pinkBg = loadImage("images/pink bg.png");
-  glassCase = loadImage("images/letter in case.PNG");
-  
-  // fonts
-  littleLego = loadFont("fonts/littlelego.ttf");
 }
 
 function showTextNode(textNodeIndex) {
@@ -185,100 +174,52 @@ const textNodes = [
       }
     ]
   },
-  // {
-  //   // road to home
-  //   id:5,
-  //   text: "You had a bad feeling about this place, despite it's splendor. Some may call you an idiot, to give up a full ride scholarship to such a decorated institution like the Academy over something like nerves.",
-  //   text: "You head out the main entrance of the Academy. Which way are you going?",
-  //   options: [
-  //     {
-  //       text: "Turn left, and walk home", //walk home
-  //       nextText 
-  //     },
-  //     {
-  //       text: "Turn right, stop by the convenience store to get ice cream before going home", //
-  //       nextText 
-  //     },
-  //     {
-  //       text: "",
-  //       nextText 
-  //     },
-  //     {
-  //       text: "",
-  //       nextText 
-  //     }
-  //   ]
-  // },
+  {
+    // road to home
+    id:5,
+    text: "You had a bad feeling about this place, despite it's splendor. Some may call you an idiot, to give up a full ride scholarship to such a decorated institution like the Academy over something like nerves.",
+    options: [
+      {
+        text: "Next...", //bad feeling
+        nextText: 10
+      }
+    ]
+  },
+
+  {
+    // bad feeling
+    id: 10,
+    text: "You head out the main entrance of the Academy. Which way are you going?",
+    options: [
+      {
+        text: "Turn left, and walk home", //walk home
+        nextText: 11
+      },
+      {
+        text: "Turn right, stop by the convenience store to get ice cream before going home", //get ice scream
+        nextText: 12
+      },
+      {
+        text: "Walk to the bus stop nearby, you're tired", //bus
+        nextText: 13
+      },
+      {
+        text: "Rob a bank, buy a porshe 911, (in pink, of course) drive it home", //rob bank
+        nextText: 14
+      }
+    ]
+  },
 ];
 
 startGame();
 
-// function draw(){ 
-//   if (state === "start"){
-//     startScreen();
-//   }
-//   else if (state === "menu"){
-//     menuScreen();
-//   }
-// }
-
-// class Button {
-//   constructor(x, y, width, height){
-//     this.x = x;
-//     this.y = y;
-//     this.width = width;
-//     this.height = height;
-//     // this.img = img;
-//   }
-  
-//   display() {
-//     image(this.img, this.x, this.y, this.width, this.height);
-//     fill("white");
-//     // rect(this.x, this.y, this.width, this.height);
-
-//   }
-  
-//   insideButton(x, y) {
-//     // faulty button
-//     let leftSide = this.x;
-//     let rightSide = this.x + this.width;
-//     let topSide = this.y;
-//     let bottomSide = this.y + this.height;
-
-//     return x >= leftSide && x <= rightSide && y >= topSide && y <= bottomSide;
-//     // return mouseX >= x && mouseX <= x + width && mouseY >= y && mouseY <= y + height;
-//   }
-// }
-
-// function startScreen() {
-//   // background for start
-//   imageMode(CENTER);
-//   background("#fee2e1");
-//   image(pinkBg, width/2.05, height/2, width*0.75, height*0.8);
-
-//   // title
-//   fill("black");
-//   textSize(60);
-//   textFont(littleLego);
-//   text("AVERAGE OTOME GAME", width/4.5, height/3);
-  
-//   //start button
-//   startButton.display();
-    
-//   // start txt
-//   fill("black");
-//   textSize(60);
-//   textFont(littleLego);
-//   text("Start", width/2.4, height/1.95);
-// }
-
-// function menuScreen() {
-//   background("black");
-// }
-
-// function mousePressed(){
-//   // change state - start to menu
-//   if (startButton.insideButton(mouseX, mouseY)){
-//     state = "menu";
-//   }
-// }
+// {
+//   id:,
+//   text: "",
+//   options: [
+//     {
+//       text: "txt",
+//       nextText: 
+//     }
+//   ]
+// },

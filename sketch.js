@@ -15,10 +15,15 @@
 
 let pinkBg, glassCase, littleLego;
 
-const dialogueText = document.getElementById("text"); //https://www.w3schools.com/js/js_htmldom_document.asp
-const buttonOptions = document.getElementById("dialogue-options");
+const dialogueText = document.getElementById("text");
+const buttonOption = document.getElementById("option-buttons");
 
 let state = {};
+
+function startGame() {
+  state = {};
+  showTextNode(1);
+}
 
 function preload(){
   // images
@@ -29,73 +34,203 @@ function preload(){
   littleLego = loadFont("fonts/littlelego.ttf");
 }
 
-function startGame() {
-  state = {};
-  showTextNode(1);
-}
-
-function showTextNode(textNodeIndex){
-  const textNode = textNodes.find(textNode => textNode === textNodeIndex);
+function showTextNode(textNodeIndex) {
+  const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
   dialogueText.innerText = textNode.text;
-  while (buttonOptions.firstChild) {
-    buttonOptions.removeChild(buttonOptions.firstChild);
+  while (buttonOption.firstChild) {
+    buttonOption.removeChild(buttonOption.firstChild);
   }
+
+  textNode.options.forEach(option => {
+    if (showOption(option)) {
+      const button = document.createElement("button");
+      button.innerText = option.text;
+      button.classList.add("button");
+      button.addEventListener("click", () => selectOption(option));
+      buttonOption.appendChild(button);
+    }
+  });
 }
 
 function showOption(option) {
-  return option.requiredState === null || option.requiredState(state);
+  return option.requiredState == null || option.requiredState(state);
 }
 
-function chooseOption(option) {
-  const nextTextNode = option.nextText;
-  if (nextTextNode <= 0) {
+function selectOption(option) {
+  const nextTextNodeId = option.nextText;
+  if (nextTextNodeId <= 0) {
     return startGame();
   }
-  state =Object.assign(state, option.setState);
-  showTextNode(nextTextNode);
+  state = Object.assign(state, option.setState);
+  showTextNode(nextTextNodeId);
 }
 
 const textNodes = [
   {
-    // dialogue/narrator
     id: 1,
-    text: "Test try.",
-
-    //option buttons
+    text: "You walk through the ridiculously lavish corridors of your school. Everything and everyone in this place was unnecessarily sparkly. As you head to the headmaster's office, you spot a mirror. What do you see in the mirror?",
     options: [
       {
-        text: "test try button 1",
-        setState: {hasButton1: true},
+        text: "A girl, about 16-17 years old, with green eyes and long brown hair",
         nextText: 2
       },
       {
-        text: "test try button 2",
+        text: "A girl, about 16-17 years old, with brown eyes and long brown hair",
+        nextText: 2
+      },
+      {
+        text: "A girl, about 16-17 years old, with blue eyes and, you guessed it, long brown hair",
         nextText: 2
       }
+      // {
+      //   text: "Test try",
+      //   setState: { variable: true },
+      //   nextText: 2
+      // },
+      // {
+      //   text: "test try 2",
+      //   nextText: 2
+      // }
     ]
-
   },
   {
-    // dialogue/narrator
     id: 2,
-    text: "Test try.",
-
-    //option buttons
+    text: "text",
     options: [
       {
-        text: "test try; trade button 1",
-        requiredState: (currentState) => currentState.hasButton1,
-        setState: {hasButton1: false, hasButton2: true},
+        text: "text",
+        requiredState: (currentState) => currentState.variable,
+        setState: { variable: false, thing: true },
         nextText: 3
       },
       {
-        text: "test try button 2",
+        text: "text",
+        requiredState: (currentState) => currentState.variable,
+        setState: { variable: false, thing2: true },
+        nextText: 3
+      },
+      {
+        text: "text",
         nextText: 3
       }
     ]
-
+  },
+  {
+    id: 3,
+    text: "text",
+    options: [
+      {
+        text: "text",
+        nextText: 4
+      },
+      {
+        text: "text",
+        nextText: 5
+      },
+      {
+        text: "text",
+        nextText: 6
+      }
+    ]
+  },
+  {
+    id: 4,
+    text: "text",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1
+      }
+    ]
+  },
+  {
+    id: 5,
+    text: "text",
+    options: [
+      {
+        text: "Play Again",
+        nextText: -1
+      }
+    ]
+  },
+  {
+    id: 6,
+    text: "text",
+    options: [
+      {
+        text: "text",
+        nextText: 7
+      }
+    ]
+  },
+  {
+    id: 7,
+    text: "text",
+    options: [
+      {
+        text: "text",
+        nextText: 8
+      },
+      {
+        text: "text",
+        requiredState: (currentState) => currentState.thing,
+        nextText: 9
+      },
+      {
+        text: "text",
+        requiredState: (currentState) => currentState.thing2,
+        nextText: 10
+      },
+      {
+        text: "text",
+        requiredState: (currentState) => currentState.variable,
+        nextText: 11
+      }
+    ]
+  },
+  {
+    id: 8,
+    text: "text",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1
+      }
+    ]
+  },
+  {
+    id: 9,
+    text: "text",
+    options: [
+      {
+        text: "Play Again",
+        nextText: -1
+      }
+    ]
+  },
+  {
+    id: 10,
+    text: "text",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1
+      }
+    ]
+  },
+  {
+    id: 11,
+    text: "text",
+    options: [
+      {
+        text: "Play Again.",
+        nextText: -1
+      }
+    ]
   }
 ];
+
+startGame();
 
 // function draw(){ 
 //   if (state === "start"){

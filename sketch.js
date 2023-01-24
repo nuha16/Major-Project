@@ -7,9 +7,6 @@
 // buttons with html = https://www.youtube.com/watch?v=_2wARy-oevQ&t=3s&ab_channel=BroCode
 // reference for css, html and js function = https://www.w3schools.com/
 // css basics = https://www.youtube.com/watch?v=1PnVor36_40&ab_channel=WebDevSimplified
-// website where I got my fonts = https://www.dafont.com/
-// an extension was needed to be downloaded for the fonts - stxr.iconfont-preview
-
 
 // for the code in my sketch js, I referenced this vid https://www.youtube.com/watch?v=R1S_NhKkvGA&t=568s&ab_channel=WebDevSimplified
 

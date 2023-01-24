@@ -67,6 +67,7 @@ function selectOption(option) {
 
 const textNodes = [
   {
+    // start
     id: 1,
     text: "You walk through the ridiculously lavish corridors of your school. Everything and everyone in this place was unnecessarily sparkly. As you head to the headmaster's office, you spot a mirror. What do you see in the mirror?",
     options: [
@@ -82,115 +83,60 @@ const textNodes = [
         text: "A girl, about 16-17 years old, with blue eyes and, you guessed it, long brown hair",
         nextText: 2
       }
-      // {
-      //   text: "Test try",
-      //   setState: { variable: true },
-      //   nextText: 2
-      // },
-      // {
-      //   text: "test try 2",
-      //   nextText: 2
-      // }
     ]
   },
   {
     id: 2,
-    text: "text",
+    text: "What did you expect? Actual customization options in an otome game? Moving forward, what will you do next?",
     options: [
       {
-        text: "text",
-        requiredState: (currentState) => currentState.variable,
-        setState: { variable: false, thing: true },
+        text: "Knock politely, and enter the headmaster's room", //Enter Headmaster's Room
         nextText: 3
       },
       {
-        text: "text",
-        requiredState: (currentState) => currentState.variable,
-        setState: { variable: false, thing2: true },
-        nextText: 3
-      },
-      {
-        text: "text",
-        nextText: 3
-      }
-    ]
-  },
-  {
-    id: 3,
-    text: "text",
-    options: [
-      {
-        text: "text",
+        text: "Kick the door open, because you're crazy apparently", //Kick Down Door
         nextText: 4
       },
       {
-        text: "text",
+        text: "Leave this place at once", //Road to Home
         nextText: 5
+      }
+    ]
+  },
+  {
+    // enter headmaster's room
+    id:3,
+    text: "You enter the room, expecting someone in at least in their 40s. But no, it was a boy not much older than you.",
+    options: [
+      {
+        text: "Ask him where the headmaster is", //ticked off headmaster
+        nextText: 6
       },
       {
-        text: "text",
+        text: "'Wow you're handsome...'", //ticked off headmaster
         nextText: 6
-      }
-    ]
-  },
-  {
-    id: 4,
-    text: "text",
-    options: [
+      },
       {
-        text: "Restart",
-        nextText: -1
-      }
-    ]
-  },
-  {
-    id: 5,
-    text: "text",
-    options: [
-      {
-        text: "Play Again",
-        nextText: -1
-      }
-    ]
-  },
-  {
-    id: 6,
-    text: "text",
-    options: [
-      {
-        text: "text",
+        text: "'What are you doing here kid'", //thrown out ending
         nextText: 7
       }
     ]
   },
   {
-    id: 7,
-    text: "text",
+    // ticked off headmaster
+    id: 6,
+    text: "The headmaster frowns and deducts points from your overall grade.", //working hard ending
     options: [
       {
-        text: "text",
+        text: "Next...",
         nextText: 8
-      },
-      {
-        text: "text",
-        requiredState: (currentState) => currentState.thing,
-        nextText: 9
-      },
-      {
-        text: "text",
-        requiredState: (currentState) => currentState.thing2,
-        nextText: 10
-      },
-      {
-        text: "text",
-        requiredState: (currentState) => currentState.variable,
-        nextText: 11
       }
     ]
   },
   {
-    id: 8,
-    text: "text",
+    // thrown out ending
+    id: 7,
+    text: "You get thrown out of the Academy.", //working hard ending
     options: [
       {
         text: "Restart",
@@ -199,8 +145,39 @@ const textNodes = [
     ]
   },
   {
-    id: 9,
-    text: "text",
+    // working hard ending
+    id: 8,
+    text: "You spend the rest of you time at the Academy drowning in schoolwork and extracurriculars. You work hard and maintain your scholarship and good grades. You graduate with flying colours, and go off to work under a prestigious university as a professor.",
+    options: [
+      {
+        text: "Play Again",
+        nextText: -1
+       }
+    ]
+  },
+  {
+    // kick down door
+    id:4,
+    text: "Feeling a bit feisty, you decide to assert your dominance by kicking the door open. However, in the seat of the headmaster, there sat a boy not much older than you, frowning.",
+    options: [
+      {
+        text: "What are ya doing here kiddo?", //thrown out ending
+        nextText: 7
+      },
+      {
+        text: "Ah, so you are the one I must challenge", //become headmaster ending
+        nextText: 9
+      },
+      {
+        text: "Tsk, look like a weakling", //thrown out ending
+        nextText: 7
+      }
+    ]
+  },
+  {
+    // become headmaster ending
+    id:9,
+    text: "You defeat the headmaster and take over the Academy. Your reign is one of terror. You go down as the worst Headmaster of the Academy.",
     options: [
       {
         text: "Play Again",
@@ -209,25 +186,92 @@ const textNodes = [
     ]
   },
   {
-    id: 10,
-    text: "text",
+    // road to home
+    id:5,
+    text: "You had a bad feeling about this place, despite it's splendor. Some may call you an idiot, to give up a full ride scholarship to such a decorated institution like the Academy over something like nerves.",
+    text: "You head out the main entrance of the Academy. Which way are you going?",
     options: [
       {
-        text: "Restart",
-        nextText: -1
+        text: "Turn left, and walk home", //walk home
+        nextText 
+      },
+      {
+        text: "Turn right, stop by the convenience store to get ice cream before going home", //get ice cream
+        nextText 
+      },
+      {
+        text: "",
+        nextText 
+      },
+      {
+        text: "",
+        nextText 
       }
     ]
   },
-  {
-    id: 11,
-    text: "text",
-    options: [
-      {
-        text: "Play Again.",
-        nextText: -1
-      }
-    ]
-  }
+
+  // {
+  //   text: "Test try",
+  //   setState: { variable: true },
+  //   nextText: 2
+  // },
+  // {
+  //   text: "test try 2",
+  //   nextText: 2
+  // }
+  // {
+  //   text: "text",
+  //   requiredState: (currentState) => currentState.variable,
+  //   setState: { variable: false, thing: true },
+  //   nextText: 3
+  // },
+  // {
+  //   text: "text",
+  //   requiredState: (currentState) => currentState.variable,
+  //   setState: { variable: false, thing2: true },
+  //   nextText: 3
+  // },
+  // {
+  //   id: 7,
+  //   text: "text",
+  //   options: [
+  //     {
+  //       text: "text",
+  //       requiredState: (currentState) => currentState.thing,
+  //       nextText: 9
+  //     },
+  //     {
+  //       text: "text",
+  //       requiredState: (currentState) => currentState.thing2,
+  //       nextText: 10
+  //     },
+  //     {
+  //       text: "text",
+  //       requiredState: (currentState) => currentState.variable,
+  //       nextText: 11
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: 8,
+  //   text: "text",
+  //   options: [
+  //     {
+  //       text: "Restart",
+  //       nextText: -1
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: 9,
+  //   text: "text",
+  //   options: [
+  //     {
+  //       text: "Play Again",
+  //       nextText: -1
+  //     }
+  //   ]
+  // }
 ];
 
 startGame();

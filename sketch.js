@@ -10,28 +10,15 @@
 // website where I got my fonts = https://www.dafont.com/
 // an extension was needed to be downloaded for the fonts - stxr.iconfont-preview
 
+
+// for the code in my sketch js, I referenced this vid https://www.youtube.com/watch?v=R1S_NhKkvGA&t=568s&ab_channel=WebDevSimplified
+
 let pinkBg, glassCase, littleLego;
-let state = {};
+
 const dialogueText = document.getElementById("text"); //https://www.w3schools.com/js/js_htmldom_document.asp
 const buttonOptions = document.getElementById("dialogue-options");
 
-const textNodes = [
-  {
-    id: 1,
-    text: "Test try.",
-
-    // the text on the option buttons
-    options: [
-      {
-        text: "test try button 1"
-      },
-      {
-        text: "test try button 2"
-      }
-    ]
-
-  }
-];
+let state = {};
 
 function preload(){
   // images
@@ -40,8 +27,6 @@ function preload(){
   
   // fonts
   littleLego = loadFont("fonts/littlelego.ttf");
-  // rainyHearts = loadFont("fonts/rainyhearts.ttf");
-  // enchantedSword = loadFont("fonts/EnchantedSword.ttf");
 }
 
 function startGame() {
@@ -49,11 +34,68 @@ function startGame() {
   showTextNode(1);
 }
 
-function showTextNode(textNodeIndex){}
+function showTextNode(textNodeIndex){
+  const textNode = textNodes.find(textNode => textNode === textNodeIndex);
+  dialogueText.innerText = textNode.text;
+  while (buttonOptions.firstChild) {
+    buttonOptions.removeChild(buttonOptions.firstChild);
+  }
+}
+
+function showOption(option) {
+  return option.requiredState === null || option.requiredState(state);
+}
 
 function chooseOption(option) {
-
+  const nextTextNode = option.nextText;
+  if (nextTextNode <= 0) {
+    return startGame();
+  }
+  state =Object.assign(state, option.setState);
+  showTextNode(nextTextNode);
 }
+
+const textNodes = [
+  {
+    // dialogue/narrator
+    id: 1,
+    text: "Test try.",
+
+    //option buttons
+    options: [
+      {
+        text: "test try button 1",
+        setState: {hasButton1: true},
+        nextText: 2
+      },
+      {
+        text: "test try button 2",
+        nextText: 2
+      }
+    ]
+
+  },
+  {
+    // dialogue/narrator
+    id: 2,
+    text: "Test try.",
+
+    //option buttons
+    options: [
+      {
+        text: "test try; trade button 1",
+        requiredState: (currentState) => currentState.hasButton1,
+        setState: {hasButton1: false, hasButton2: true},
+        nextText: 3
+      },
+      {
+        text: "test try button 2",
+        nextText: 3
+      }
+    ]
+
+  }
+];
 
 // function draw(){ 
 //   if (state === "start"){

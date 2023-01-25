@@ -194,14 +194,6 @@ const textNodes = [
         nextText: 11
       },
       {
-        text: "Turn right, stop by the convenience store to get ice cream before going home", //get ice scream
-        nextText: 12
-      },
-      {
-        text: "Walk to the bus stop nearby, you're tired", //bus
-        nextText: 13
-      },
-      {
         text: "Rob a bank, buy a porshe 911, (in pink, of course) drive it home", //rob bank
         nextText: 14
       }
@@ -265,7 +257,7 @@ const textNodes = [
     ]
   },
   {
-    // 
+    // spider senses
     id: 19,
     text: "At this point even I am annoyed that this main character is so persistent. And despite your needless curiosity, there was nothing here, just like before. You approach the forest-like area besides the bushes. Continue searching?",
     options: [
@@ -274,8 +266,38 @@ const textNodes = [
         nextText: 17
       },
       {
-        text: "Yes, my gut feeling has never betrayed me before", // 
+        text: "Yes, my gut feeling has never betrayed me before", // gut feeling
         nextText: 20
+      }
+    ]
+  },
+  {
+    // gut feeling
+    id:20,
+    text: "As you venture into the forest, you see nothing at all. I don't know why you still want to keep looking. There obviously isn't anything here, just go home, I'm begging you.",
+    options: [
+      {
+        text: "You feel bad for the author and return home", // boring and peaceful ending
+        nextText: 17
+      },
+      {
+        text: "There must be something here", // persistent protagonist
+        nextText: 21
+      }
+    ]
+  },
+  {
+    // persistent protagonist
+    id:21,
+    text: "Good thing you don't care about my feelings, because if you did you wouldn't have stumbled across a woman leaning on a tree, with a stab wound on the side of her stomach. She looked pale, but it didn't seem fatal. However, she gave off a dangerous aura.",
+    options: [
+      {
+        text: "Leave, because you don't have a heart", // boring and peaceful ending
+        nextText: 17
+      },
+      {
+        text: "Hey are you alri-", // assasination ending
+        nextText: 22
       }
     ]
   },
@@ -283,6 +305,69 @@ const textNodes = [
     // boring and peaceful ending
     id:17,
     text: "You return home, safe and sound. You attend a normal school and graduate very normally, get a normal job and live a normal live. You live until your 90s, and die a peaceful death.",
+    options: [
+      {
+        text: "Play Again",
+        nextText: -1
+      }
+    ]
+  },
+  {
+    // assasination ending
+    id:22,
+    text: "Before you can even finish your sentence, with a swift flick of her wrist, she throws a bloody dagger at you. It pierces your your chest, and your vision starts to dim. 'Ah she was a civilian' She clicks her tongue. Yeah, you died. I tried to warn you.",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1
+      }
+    ]
+  },
+  {
+    // rob bank
+    id:14,
+    text: "You make it very obvious that you are impulsive, and even unhinged, because why is someone who was about to go to school suddenly deciding to rob a bank? As the main character, you have combat abilities too apparently. You are born with an innate talent for anything you choose to do, including robbing a bank.",
+    options: [
+      {
+        text: "You realize that what you did was insane, return the money to the bank and apologize", // return the money
+        nextText: 23
+      },
+      {
+        text: "Now that I'm a criminal... Might as well become a good one", //robin hood ending
+        nextText: 24
+      },
+      {
+        text: "I guess I can retire and lay low now that I'm rich", //retire young ending
+        nextText: 25
+      }
+    ]
+  },
+  {
+    // 
+    id:23,
+    text: "The police takes the money from you, confused. But since you since you're a minor, you get off easy.",
+    options: [
+      {
+        text: "Next..", // boring and peaceful ending
+        nextText: 17
+      }
+    ]
+  },
+  {
+    // Robin Hood ending
+    id:24,
+    text: "You live the rest of your life stealing from rich corporations and donating that money to all sorts of charities. You beome an infamous Robin Hood of sorts.",
+    options: [
+      {
+        text: "Play Again",
+        nextText: -1
+      }
+    ]
+  },
+  {
+    // 
+    id:25,
+    text: "Being the main character you are, the police never end up catching you. Consider it plot armour. You buy a small island, and spend the rest of your life on vacation mode. You even pick up youtube and become a widely known online personality. You travel to many countries and die as a happy and fulfilled woman at the age of 97.",
     options: [
       {
         text: "Play Again",

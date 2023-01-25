@@ -3,8 +3,9 @@
 
 ## Need to have
 - single player (complete)
-- main menu page
+- start page
 - dialogue options (complete)
+- bad endings and good endings (complete)
 - different endings based on player's choices (complete)
 - background music and sound effects
 

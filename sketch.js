@@ -15,6 +15,8 @@ const buttonOption = document.getElementById("option-buttons");
 
 let state = {};
 
+let stateForStartScreen = "start"
+
 // starts the game
 function startGame() {
   state = {};
@@ -50,6 +52,10 @@ function selectOption(option) {
   }
   state = Object.assign(state, option.setState);
   showTextNode(nextTextNodeId);
+}
+
+function startScreen() {
+
 }
 
 const textNodes = [

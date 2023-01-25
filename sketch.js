@@ -23,6 +23,7 @@ function startGame() {
   showTextNode(1);
 }
 
+//text
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
   dialogueText.innerText = textNode.text;
@@ -52,10 +53,6 @@ function selectOption(option) {
   }
   state = Object.assign(state, option.setState);
   showTextNode(nextTextNodeId);
-}
-
-function startScreen() {
-
 }
 
 const textNodes = [

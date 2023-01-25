@@ -8,4 +8,4 @@
 - Learning css and html in a short period of time
 
 # Were there any problems you could not solve?
-- not problems exactly, but I could not finish my start screen and add music/sound effects
+- not problems exactly, but I could not finish my start screen and add music/sound effects. I also had some problems with implementing my font.

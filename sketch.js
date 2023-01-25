@@ -384,14 +384,3 @@ const textNodes = [
 ];
 
 startGame();
-
-// {
-//   id:,
-//   text: "",
-//   options: [
-//     {
-//       text: "txt",
-//       nextText: 
-//     }
-//   ]
-// },
